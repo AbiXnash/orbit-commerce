@@ -38,6 +38,15 @@ class SupportTicketServiceTest {
     }
 
     @Test
+    void refusesANegativePriority() {
+        when(repository.existsByCode("A1")).thenReturn(false);
+        CreateSupportTicketRequest request =
+                new CreateSupportTicketRequest("A1", "Sample", -1, BigDecimal.TEN, "customerCode-value", "subject-value");
+        assertThrows(IllegalArgumentException.class, () -> service.create(request));
+        verify(repository, never()).save(any());
+    }
+
+    @Test
     void reportsAMissingItem() {
         when(repository.findById(9L)).thenReturn(Optional.empty());
         assertThrows(NotFoundException.class, () -> service.get(9L));
