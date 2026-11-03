@@ -26,6 +26,9 @@ public class CarrierService {
 
     @Transactional
     public CarrierResponse create(CreateCarrierRequest request) {
+        if (repository.existsByCode(request.code())) {
+            throw new ConflictException(ErrorCode.DUPLICATE_CODE, request.code());
+        }
         if (request.priority() < 0) {
             throw new IllegalArgumentException("priority must not be negative");
         }
