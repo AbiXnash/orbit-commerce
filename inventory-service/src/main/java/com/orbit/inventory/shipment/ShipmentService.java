@@ -68,7 +68,7 @@ public class ShipmentService {
     @Transactional
     public ShipmentResponse update(Long id, CreateShipmentRequest request) {
         Shipment item = find(id);
-        if (item.getStatus() == "ARCHIVED") {
+        if (!item.isActive()) {
             throw new ConflictException(ErrorCode.NOT_ACTIVE, item.getCode());
         }
         item.setName(request.name());
