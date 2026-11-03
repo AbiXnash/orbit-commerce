@@ -15,7 +15,7 @@ import java.util.Objects;
 
 /** A Order as stored by the order service. */
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 public class Order {
 
     @Id
