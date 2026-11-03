@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0
+
+- Added consistent business concepts across all seven services
+- Added shared money, percentage, paging, text, check, duration, date and id types
+- Fixed negative adjustment priorities
+- Fixed missing replenishments raising NoSuchElementException
+- Fixed duplicate support ticket codes being accepted
+- Added architecture, domain, API, data, security, testing and operations docs
+
 ## Unreleased
 
 - Small improvement 6
