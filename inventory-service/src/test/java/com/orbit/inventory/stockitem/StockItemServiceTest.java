@@ -10,9 +10,14 @@ import static org.mockito.Mockito.when;
 
 import com.orbit.common.ConflictException;
 import com.orbit.common.NotFoundException;
+import com.orbit.common.PageRequest;
+import com.orbit.common.PageResult;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 
 class StockItemServiceTest {
 
@@ -49,5 +54,24 @@ class StockItemServiceTest {
         item.archive();
         when(repository.findById(1L)).thenReturn(Optional.of(item));
         assertThrows(ConflictException.class, () -> service.update(1L, request("A1")));
+    }
+
+    @Test
+    void pagesStockItemsByPriority() {
+        StockItem item = new StockItem("A1", "Sample");
+        item.setPriority(3);
+        when(repository.findAll(any(Pageable.class))).thenReturn(new PageImpl<>(List.of(item)));
+        PageResult<StockItemResponse> page = service.page(PageRequest.first());
+        assertEquals(1, page.items().size());
+        assertEquals(1, page.total());
+        assertEquals("A1", page.items().get(0).code());
+    }
+
+    @Test
+    void reportsAnEmptyStockItemPage() {
+        when(repository.findAll(any(Pageable.class))).thenReturn(new PageImpl<>(List.of()));
+        PageResult<StockItemResponse> page = service.page(PageRequest.first());
+        assertEquals(0, page.total());
+        assertEquals(0, page.pageCount());
     }
 }

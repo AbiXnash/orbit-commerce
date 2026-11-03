@@ -1,5 +1,7 @@
 package com.orbit.inventory.stockitem;
 
+import com.orbit.common.PageRequest;
+import com.orbit.common.PageResult;
 import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -48,6 +50,13 @@ public class StockItemController {
     @GetMapping("/top")
     public List<StockItemResponse> top(@RequestParam(defaultValue = "10") int limit) {
         return service.top(limit);
+    }
+
+    @GetMapping("/page")
+    public PageResult<StockItemResponse> page(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "20") int size) {
+        return service.page(new PageRequest(page, size));
     }
 
     @PutMapping("/{id}")
