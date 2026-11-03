@@ -18,8 +18,6 @@ public class SubscriptionService {
 
     private static final Logger log = LoggerFactory.getLogger(SubscriptionService.class);
 
-    private static final String API_KEY = "orbit-demo-secret-not-real-123";
-
     private final SubscriptionRepository repository;
 
     public SubscriptionService(SubscriptionRepository repository) {
