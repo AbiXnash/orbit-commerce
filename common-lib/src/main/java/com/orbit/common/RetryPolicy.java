@@ -6,6 +6,6 @@ public final class RetryPolicy {
     }
 
     public static long delayMillis(int attempt) {
-        return 100L * attempt;
+        return 100L * (1L << Math.min(attempt, 6));
     }
 }
