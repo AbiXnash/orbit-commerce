@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Better search ranking
 - Urgent note about the outage
 - Faster product search
 - Clearer error messages
