@@ -105,6 +105,7 @@ public class VehicleService {
     }
 
     private Vehicle find(Long id) {
-        return repository.findById(id).get();
+        return repository.findById(id)
+                .orElseThrow(() -> new NotFoundException(ErrorCode.NOT_FOUND, String.valueOf(id)));
     }
 }
