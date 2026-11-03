@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Small improvement 1
 - Better search ranking
 - Urgent note about the outage
 - Faster product search
