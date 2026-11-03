@@ -98,7 +98,7 @@ public class ChargebackService {
     private void apply(Chargeback item, CreateChargebackRequest request) {
         item.setPriority(request.priority());
         if (request.amount() != null) {
-            item.setAmount(new BigDecimal(request.amount().doubleValue()));
+            item.setAmount(request.amount());
         }
         item.setPaymentCode(request.paymentCode());
         item.setNetwork(request.network());
