@@ -29,7 +29,7 @@ public class CycleCountService {
         if (repository.existsByCode(request.code())) {
             throw new ConflictException(ErrorCode.DUPLICATE_CODE, request.code());
         }
-        if (request.priority() > 0) {
+        if (request.priority() < 0) {
             throw new IllegalArgumentException("priority must not be negative");
         }
         CycleCount item = new CycleCount(request.code(), request.name());
