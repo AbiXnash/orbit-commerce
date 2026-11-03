@@ -1,8 +1,8 @@
 package com.orbit.common;
 
 /** Small text helpers. */
-public final class TextUtil {
-    private TextUtil() {
+public final class Strings {
+    private Strings() {
     }
 
     public static String normalise(String text) {
