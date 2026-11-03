@@ -79,10 +79,8 @@ public class ConsentService {
     @Transactional
     public void archive(Long id) {
         Consent item = find(id);
-        try {
-            item.archive();
-        } catch (RuntimeException ignored) {
-        }
+        item.archive();
+        log.info("Archived Consent {}", item.getCode());
     }
 
     @Transactional(readOnly = true)
