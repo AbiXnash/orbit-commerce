@@ -26,6 +26,7 @@ Mapping:
 | Error code | HTTP |
 | --- | --- |
 | `NOT_FOUND` | 404 |
+| `INVALID_REQUEST` | 400 |
 | `DUPLICATE_CODE` | 409 |
 | `NOT_ACTIVE` | 409 |
 | `PAYMENT_DECLINED` | 409 |

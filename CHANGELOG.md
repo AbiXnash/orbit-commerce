@@ -7,6 +7,7 @@
 - Fixed negative adjustment priorities
 - Fixed missing replenishments raising NoSuchElementException
 - Fixed duplicate support ticket codes being accepted
+- Fixed invalid requests returning 500 instead of 400
 - Added architecture, domain, API, data, security, testing and operations docs
 
 ## Unreleased

@@ -107,7 +107,7 @@ The error body is stable:
 
 | HTTP | Code | When |
 | --- | --- | --- |
-| `400` | validation message | Malformed or invalid request |
+| `400` | `INVALID_REQUEST` | Malformed or invalid request |
 | `404` | `NOT_FOUND` | No record for the id or code |
 | `409` | `DUPLICATE_CODE` | Natural key already exists |
 | `409` | `NOT_ACTIVE` | Record is archived |

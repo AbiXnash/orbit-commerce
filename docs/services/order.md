@@ -15,7 +15,7 @@ com.orbit.order
 | --- | --- | --- |
 | Cart | `cart` | Pre-checkout basket |
 | CheckoutSession | `checkout_session` | One checkout attempt |
-| Order | `order` | Committed purchase |
+| Order | `orders` | Committed purchase |
 | OrderLine | `order_line` | One product in an order |
 | OrderNote | `order_note` | Internal note |
 | OrderApproval | `order_approval` | Sensitive-order approval |

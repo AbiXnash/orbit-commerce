@@ -110,8 +110,8 @@ removed, because clients depend on it.
 
 | Status | Meaning |
 | --- | --- |
-| `400` | The request body failed validation |
-| `404` | No record for the id or code |
+| `400` | `INVALID_REQUEST` for a body or value that failed validation |
+| `404` | `NOT_FOUND` for an unknown id or code |
 | `409` | A business rule rejected the change |
 | `500` | An unexpected failure; logged with a correlation id |
 

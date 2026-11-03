@@ -60,7 +60,7 @@ record archived and still returns `204`.
 
 | Status | Code | Cause |
 | --- | --- | --- |
-| `400` | validation message | Missing or invalid body field |
+| `400` | `INVALID_REQUEST` | Missing, malformed or invalid request value |
 | `404` | `NOT_FOUND` | Unknown id or code |
 | `409` | `DUPLICATE_CODE` | Natural key already exists |
 | `409` | `NOT_ACTIVE` | Update against an archived record |
