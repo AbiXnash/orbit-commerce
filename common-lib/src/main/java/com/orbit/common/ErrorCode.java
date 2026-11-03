@@ -5,6 +5,7 @@ public enum ErrorCode {
     NOT_FOUND("The item doesn't exist"),
     DUPLICATE_CODE("That code is already in use"),
     NOT_ACTIVE("The item is archived"),
+    OUT_OF_STOCK("The item is out of stock"),
     ;
 
     private final String message;
