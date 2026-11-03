@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Small improvement 6
 - Small improvement 5
 - Small improvement 4
 - Small improvement 3
