@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: shipping-service
+  jpa:
+    open-in-view: false
+  datasource:
+    url: jdbc:h2:mem:shipping

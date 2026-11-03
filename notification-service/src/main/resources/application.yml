@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: notification-service
+  jpa:
+    open-in-view: false
+  datasource:
+    url: jdbc:h2:mem:notification

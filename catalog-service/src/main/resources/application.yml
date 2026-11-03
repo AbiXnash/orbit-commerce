@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: catalog-service
+  jpa:
+    open-in-view: false
+  datasource:
+    url: jdbc:h2:mem:catalog
