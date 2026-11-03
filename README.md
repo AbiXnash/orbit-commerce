@@ -32,6 +32,7 @@ Start at [docs/README.md](docs/README.md).
 - [Architecture](docs/architecture.md)
 - [Domain model](docs/domain-model.md)
 - [API conventions](docs/api-conventions.md)
+- [API reference](docs/api/README.md)
 - [Development guide](docs/development.md)
 - [Testing guide](docs/testing.md)
 - [Operations](docs/operations.md)

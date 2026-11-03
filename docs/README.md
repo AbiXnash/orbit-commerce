@@ -19,6 +19,17 @@ to a single service without reading every source file.
 | [Glossary](glossary.md) | A term in a ticket is unfamiliar |
 | [Roadmap](roadmap.md) | You are planning the next slice |
 
+## API reference
+
+- [API reference index](api/README.md)
+- [Catalog](api/catalog.md)
+- [Inventory](api/inventory.md)
+- [Order](api/order.md)
+- [Payment](api/payment.md)
+- [Customer](api/customer.md)
+- [Shipping](api/shipping.md)
+- [Notification](api/notification.md)
+
 ## Service guides
 
 - [Catalog](services/catalog.md)
