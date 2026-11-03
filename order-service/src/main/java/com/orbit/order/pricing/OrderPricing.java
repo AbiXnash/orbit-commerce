@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderPricing {
 
-    public BigDecimal total(BigDecimal net, BigDecimal tax) {
+    public BigDecimal grossTotal(BigDecimal net, BigDecimal tax) {
         return net.add(tax);
     }
 }
