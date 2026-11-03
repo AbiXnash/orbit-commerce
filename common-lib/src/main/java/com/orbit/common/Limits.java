@@ -4,7 +4,7 @@ package com.orbit.common;
 public final class Limits {
     public static final int PAGE_SIZE = 100;
     public static final int MAX_RETRIES = 5;
-    public static final long TIMEOUT_MILLIS = 2000;
+    public static final long TIMEOUT_MILLIS = 50;
 
     private Limits() {
     }
