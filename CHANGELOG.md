@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Urgent note about the outage
 - Faster product search
 - Clearer error messages
 - First release
