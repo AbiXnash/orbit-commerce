@@ -13,6 +13,6 @@ public class QuotePricing {
     }
 
     public BigDecimal quote(BigDecimal net, BigDecimal tax) {
-        return pricing.total(net, tax);
+        return pricing.grossTotal(net, tax);
     }
 }
