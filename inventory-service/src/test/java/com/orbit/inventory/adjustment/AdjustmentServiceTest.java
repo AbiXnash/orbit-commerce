@@ -38,6 +38,15 @@ class AdjustmentServiceTest {
     }
 
     @Test
+    void refusesANegativePriority() {
+        when(repository.existsByCode("A1")).thenReturn(false);
+        CreateAdjustmentRequest request =
+                new CreateAdjustmentRequest("A1", "Sample", -1, BigDecimal.TEN, "reason-value", "approvedBy-value");
+        assertThrows(IllegalArgumentException.class, () -> service.create(request));
+        verify(repository, never()).save(any());
+    }
+
+    @Test
     void reportsAMissingItem() {
         when(repository.findById(9L)).thenReturn(Optional.empty());
         assertThrows(NotFoundException.class, () -> service.get(9L));
