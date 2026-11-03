@@ -6,6 +6,7 @@ public enum ErrorCode {
     DUPLICATE_CODE("That code is already in use"),
     NOT_ACTIVE("The item is archived"),
     PAYMENT_DECLINED("The payment was declined"),
+    OUT_OF_STOCK("The item is out of stock"),
     ;
 
     private final String message;
