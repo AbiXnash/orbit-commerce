@@ -35,7 +35,7 @@ public class ProductService {
         Product item = new Product(request.code(), request.name());
         apply(item, request);
         Product saved = repository.save(item);
-        System.out.println("Created " + saved.getCode());
+        log.info("Created Product {}", saved.getCode());
         return ProductResponse.from(saved);
     }
 
