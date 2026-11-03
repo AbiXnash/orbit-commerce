@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Small improvement 3
 - Small improvement 2
 - Small improvement 1
 - Better search ranking
