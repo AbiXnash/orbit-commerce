@@ -815,6 +815,25 @@ curl -X POST http://localhost:8080/api/order-approvals \
 - Activation and deactivation are explicit actions, never implicit writes.
 - Amount changes use a signed delta and are applied inside one transaction.
 
+
+## Paged order search
+
+`GET /api/orders/page?page=0&size=20` returns a bounded page of orders ordered
+by priority, highest first. It is the preferred read for list screens; the
+unpaged list endpoint is kept for compatibility.
+
+```json
+{
+  "items": [],
+  "total": 0,
+  "page": 0,
+  "size": 20
+}
+```
+
+`page` is zero-based and `size` is capped at 200. A page or size outside the
+allowed range returns `400 INVALID_REQUEST`; it is never silently clamped.
+
 ## Consistency notes
 
 - Writes are transactional. A failed write leaves no partial record.
